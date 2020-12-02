@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.adminWrap {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 9% 2fr 0.5fr 2fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.userList {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background-color: #0a416b;
   color: white;
+  text-align: center;
+  overflow: scroll;
+
+  border-radius: 0px 5px 3px 0px;
+  box-shadow: 2px 2px 8px lightslategray;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.dateNav {
+  height: 100%;
+  padding-top: 5%;
+  align-self: center;
+  text-align: center;
+  background-color: #0b0c1b;
+  background-size: cover;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.2rem;
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeArrow {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+#workerTitle {
+  padding: 10px;
+  height: 60px;
+  padding-top: 18px;
+  margin-bottom: 15px;
+  font-family: "Noto Sans JP", sans-serif, Helvetica, Arial, sans-serif;
+
+  align-items: center;
+
+  font-size: 0.9rem;
+  background-color: #0b0c1b;
+
+  color: rgb(255, 255, 255);
+}
+.btn {
+  background: unset;
+  border: 2px rgb(2, 2, 66);
+  display: inline-flex;
+  align-items: center;
+}
+
+li {
+  padding: 0px 5px 0px 5px;
+}
+
+.hourSelect {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5%;
+  padding: 5%;
+  align-items: center;
+  justify-items: center;
+  background-color: #0b0c1b;
+}
+
+.numberList {
+  font-family: "Open Sans Condensed", sans-serif;
+  background-color: #0b0c1b;
+  border-radius: 50%;
+  border: whitesmoke 1px solid;
+  width: 40px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 25px;
+  color: whitesmoke;
+  padding: 3%;
 }
